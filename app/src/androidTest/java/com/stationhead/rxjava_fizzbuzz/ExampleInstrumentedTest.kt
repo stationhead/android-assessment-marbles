@@ -1,4 +1,4 @@
-package com.example.stationhead_assessment
+package com.stationhead.rxjava_fizzbuzz
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

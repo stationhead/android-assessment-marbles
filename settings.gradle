@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Stationhead_Assessment"
+rootProject.name = "rxjava_fizzbuzz"

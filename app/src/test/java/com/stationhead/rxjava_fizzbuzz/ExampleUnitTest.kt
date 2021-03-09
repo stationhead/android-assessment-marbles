@@ -1,4 +1,4 @@
-package com.example.stationhead_assessment
+package com.stationhead.rxjava_fizzbuzz
 
 import org.junit.Test
 

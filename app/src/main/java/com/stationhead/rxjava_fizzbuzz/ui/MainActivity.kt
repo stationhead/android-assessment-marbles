@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
     private val model: MainActivityViewModel by lazy { ViewModelProvider(this).get(
         MainActivityViewModel::class.java) }
 
+    // Phase-1 objective:
+    // Amber light should turn on every 3 seconds
+    // Green light should turn on every 5 seconds
+    // Lights will turn when `isActivated` is true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

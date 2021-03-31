@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
     //    "FizzBuzz" when both lights flashes, and
     //    nothing ("") when neither light flashes.
 
+    //Phase-3 objective:
+    // Integrate Spinners to let user select rate of flashes.
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

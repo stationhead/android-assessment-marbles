@@ -21,7 +21,12 @@ class MainActivityViewModel : ViewModel() {
     val rightPickerValueUpdated  = buzzCount::onNext
     private val disposables by lazy { CompositeDisposable() }
 
-    val ticker: Observable<Unit> = Observable.interval(1, TimeUnit.SECONDS).map { _ -> Unit }
+    val ticker: Observable<FlashState> = Observable.interval(1, TimeUnit.SECONDS).flash()
 
+    private fun Observable<*>.flash() = flatMap { _ ->
+        Observable.just(FlashState.ON)
+            .mergeWith(Observable.timer(400, TimeUnit.MILLISECONDS).map { _ -> FlashState.OFF })
+    }
 
+    enum class FlashState {ON, OFF}
 }

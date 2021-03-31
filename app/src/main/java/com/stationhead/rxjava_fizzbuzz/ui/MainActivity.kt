@@ -19,6 +19,14 @@ class MainActivity : AppCompatActivity() {
     // Green light should turn on every 5 seconds
     // Lights will turn when `isActivated` is true
 
+    // Phase-2 objective:
+    // integrate flash functionality.
+    // update status label to read:
+    //    "Fizz" when the amber light flashes,
+    //    "Buzz" when the green light flashes,
+    //    "FizzBuzz" when both lights flashes, and
+    //    nothing ("") when neither light flashes.
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

@@ -17,5 +17,16 @@ class MainActivityViewModel : ViewModel() {
 
     val ticker: Observable<Unit> = TickProvider().getTicks()
 
+    val count: Observable<Int> = ticker.scan(0) { accumulator, current  ->
+        accumulator + 1
+    }
+
+    val filteredAmber= count.filter {
+        it % 3 == 0
+    }
+
+    val filteredGreen= count.filter {
+        it % 5 == 0
+    }
 
 }
